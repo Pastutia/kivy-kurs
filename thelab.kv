@@ -1,4 +1,26 @@
-StackLayoutExample:
+WidgetsExample:
+
+<WidgetsExample>:
+    cols: 3
+    Button:
+        text: "Licz"
+        on_press: root.on_button_click()
+    Label:
+        text: root.my_text
+        font_name: "fonts/Lcd.ttf"
+        font_size: "80dp"
+        color: 1, .5, 1, 1
+
+<PageLayoutExample@PageLayout>:
+    MainWidget:
+    BoxLayoutExample:
+    AnchorLayoutExample:
+    GridLayoutExample:
+
+<ScrollViewExample@ScrollView>:
+    StackLayoutExample:
+        size_hint: 1, None
+        height: self.minimum_height
 
 <StackLayoutExample>:
     # left-right top-bottom

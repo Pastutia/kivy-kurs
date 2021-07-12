@@ -1,5 +1,25 @@
-BoxLayoutExample: # jeśli tu zmienimy na MainWidget, AnchorLayoutExample, GridLayoutExample
+BoxLayoutExample: # jeśli tu zmienimy na
+MainWidget, AnchorLayoutExample, GridLayoutExample, ScrollViewExample, PageLayoutExample
 to będą inaczej klawisze
+
+<WidgetsExample>:
+    cols: 3
+    Button:
+        text: "Kliknij tutaj"
+        on_press: root.on_button_click()
+    Label:
+        text: root.my_text
+
+<PageLayoutExample@PageLayout>:
+    MainWidget:
+    BoxLayoutExample:
+    AnchorLayoutExample:
+    GridLayoutExample:
+
+<ScrollViewExample@ScrollView>:
+    StackLayoutExample:
+        size_hint: 1, None
+        height: self.minimum_height
 
 <StackLayoutExample>:
     # left-right top-bottom
